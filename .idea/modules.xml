@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AJAX_Test/AJAX_Test.iml" filepath="$PROJECT_DIR$/AJAX_Test/AJAX_Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HttpServlet/HttpServlet.iml" filepath="$PROJECT_DIR$/HttpServlet/HttpServlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JSP_Servlet_TEST/JSP_Servlet_TEST.iml" filepath="$PROJECT_DIR$/JSP_Servlet_TEST/JSP_Servlet_TEST.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ServletCRUD/ServletCRUD.iml" filepath="$PROJECT_DIR$/ServletCRUD/ServletCRUD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ServletCRUD_Test/ServletCRUD_Test.iml" filepath="$PROJECT_DIR$/ServletCRUD_Test/ServletCRUD_Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ServletJRUD/ServletJRUD.iml" filepath="$PROJECT_DIR$/ServletJRUD/ServletJRUD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-teat/java-teat.iml" filepath="$PROJECT_DIR$/java-teat/java-teat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaWEB/javaWEB.iml" filepath="$PROJECT_DIR$/javaWEB/javaWEB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaWEB_Test.iml" filepath="$PROJECT_DIR$/javaWEB_Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/mybatis/mybatis.iml" />
+    </modules>
+  </component>
+</project>

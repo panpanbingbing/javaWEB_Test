@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>省，市，区联动</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  window.onload = function() {
+    var  xhr = new XMLHttpRequest();
+    var  xhr1 = new XMLHttpRequest();
+    var  xhr2 = new XMLHttpRequest();
+    var shen= document.getElementById("shen")
+    var shi= document.getElementById("shi")
+
+
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          var html="<option>~~~请选择省份~~~</option>";
+          var json= JSON.parse(xhr.responseText);
+          for (var i = 0; i < json.length; i++) {
+           html += "<option value=\""+json[i].code+"\">"+json[i].name+"</option>"
+          }
+          shen.innerHTML = html
+        }
+      }
+    }
+    xhr.open('GET', '/AJAX/code/shen?'+new Date().getTime(), true);
+    xhr.send();
+
+    shen.onchange = function() {
+    // alert(shen.value)
+      xhr1.onreadystatechange = function() {
+        if (xhr1.readyState === 4) {
+          if (xhr1.status === 200) {
+            var html="<option>~~~请选择市~~~</option>";
+            var json= JSON.parse(xhr1.responseText);
+            for (var i = 0; i < json.length; i++) {
+              html += "<option value=\""+json[i].code+"\">"+json[i].name+"</option>"
+            }
+            shi.innerHTML = html
+          }
+        }
+      }
+      xhr1.open("GET", '/AJAX/code/shi?code='+shen.value+"&t="+new Date().getTime(),true)
+      xhr1.send();
+    }
+    document.getElementById("shi").onchange = function() {
+
+    }
+
+
+  }
+</script>
+<form enctype="application/x-www-form-urlencoded"></form>
+<select id="shen">
+</select>
+<select id="shi">
+
+</select>
+<select id="qu">
+
+</select>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+    <servlet>
+        <servlet-name>Register_Servlet</servlet-name>
+        <servlet-class>com.jdp.Http_Servlet.Register_Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Register_Servlet</servlet-name>
+        <url-pattern>/Register_Servlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>rul</servlet-name>
+        <servlet-class>com.jdp.Http_Servlet.HttpRequestServletTest</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>rul</servlet-name>
+        <url-pattern>/url</url-pattern>
+    </servlet-mapping>
+
+</web-app>

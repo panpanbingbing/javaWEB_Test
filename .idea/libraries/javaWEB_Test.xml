@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="javaWEB_Test">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$" />
+      <root url="jar://$PROJECT_DIR$/../jar/apache-tomcat-10.0.12/lib/jsp-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar/apache-tomcat-10.0.12/lib/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar/mysql-connector-java-8.0.30/mysql-connector-java-8.0.30/mysql-connector-java-8.0.30.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar/fastjson/fastjson-1.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar/2_MyBatis/resource/mybatis/mybatis-3.4.5/mybatis-3.4.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/HttpServlet/src" />
+      <root url="file://$PROJECT_DIR$/javaWEB/src" />
+    </SOURCES>
+  </library>
+</component>

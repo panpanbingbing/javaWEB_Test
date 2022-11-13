@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎学习ajax</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    window.onload = function(){
+        document.getElementById("submit01").onclick = function(){
+            var xhs =new XMLHttpRequest();
+            // console.log("dsadsaf");
+            xhs.onreadystatechange = function() {
+                if (this.readyState === 4) {
+                    if (this.status === 200) {
+                        var  html=""
+                       var students= JSON.parse(this.responseText)
+                        for (var i=0; i<students.length; i++){
+                           html += "name :"+students[i].name+"<br>"
+                           html += "age :"+students[i].age+"<br>"
+                           html += "addr :"+students[i].addr+"<br>"
+                        }
+                        document.getElementById("footer001").innerHTML=html
+                    }else {
+                        alert(this.status);
+                    }
+                }
+            }
+            xhs.open('GET', '/AJAX/ajax', true);
+            xhs.send();
+        }
+    }
+</script>
+<input type="button" value="ajax" id="submit01">
+<div id="footer001"></div>
+</body>
+</html>

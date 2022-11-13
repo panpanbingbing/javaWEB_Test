@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+
+    <servlet>
+        <servlet-name>updaetdepton</servlet-name>
+        <servlet-class>CRUD_Test.ServletUpdaetDepton</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updaetdepton</servlet-name>
+        <url-pattern>/updaetdepton</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>update</servlet-name>
+        <servlet-class>CRUD_Test.ServletDeptUpdate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>update</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+    
+
+    <servlet>
+        <servlet-name>add</servlet-name>
+        <servlet-class>CRUD_Test.ServletAddtepdon</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>add</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>delete</servlet-name>
+        <servlet-class>CRUD_Test.ServletDeletedept</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>delete</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>list</servlet-name>
+        <servlet-class>CRUD_Test.Servletlist</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>list</servlet-name>
+        <url-pattern>/list</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>deptnolist</servlet-name>
+        <servlet-class>CRUD_Test.Servletdaptnolist</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deptnolist</servlet-name>
+        <url-pattern>/deptnolist</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>

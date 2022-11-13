@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>list</title>
+</head>
+<body>
+
+<script type='text/javascript'>
+
+   function dels(tepton ){
+
+       if (window.confirm('亲，确定删除吗？')) {
+       document.location.href='/delete/dsaf?delet='+tepton}
+   }
+</script>
+
+<h1 align='center'>部门列表</h1>
+<hr>
+<table  border='1px' align='center' width='50%' >
+<tr>
+    <th>序号</th>
+    <th>部门编号</th>
+    <th>部门名称</th>
+    <th>操作</th>
+</tr>
+
+
+<tr>
+    <td>10</td>
+    <td>das</td>
+    <td>5456</td>
+    <td>
+        <a href='javascript:viod(0)' onclick='dels(54)' >删除</a>
+
+        <a >修改</a>
+        <a >详情</a>
+    </td>
+    <tr>
+        <td>20</td>
+        <td>das</td>
+        <td>5456</td>
+        <td>
+            <a href='javascript:viod(0)' onclick='dels(32878)' >删除</a>
+
+            <a >修改</a>
+            <a >详情</a>
+        </td>
+
+    <tr>
+        <td>30</td>
+        <td>das</td>
+        <td>5456</td>
+        <td>
+            <a href='javascript:viod(0)' onclick='dels(3287)' >删除</a>
+
+            <a >修改</a>
+            <a >详情</a>
+        </td>
+
+</table>
+<hr>
+<a href='add.html'>新增部门</a>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生列表</title>
+</head>
+<body>
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById("student").onclick = function() {
+         var xhr = new XMLHttpRequest();
+
+         xhr.onreadystatechange = function() {
+             if (xhr.readyState === 4) {
+                 if (xhr.status === 200) {
+                     var html =""
+                     var data = JSON.parse(xhr.responseText);
+                     for (var i=0; i<data.length; i++){
+                         html += "name :"+data[i].name+"<br>"
+                         html += "age :"+data[i].age+"<br>"
+                         html += "addr :"+data[i].addr+"<br>"
+                     }
+                     document.getElementById("studentlist").innerHTML =html
+                 }else {
+                     alert(xhr.status)
+                 }
+             }
+
+         }
+         // xhs.open('GET', '/AJAX/ajax', true);
+         xhr.open("GET", "/AJAX/student", true);
+         xhr.send();
+
+        }
+    }
+
+
+</script>
+
+
+<input type="button" id="student" value="显示学生信息">
+<div  id="studentlist"></div>
+
+
+
+</body>
+</html>

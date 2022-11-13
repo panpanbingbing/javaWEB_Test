@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ajax实现搜索和自动补全</title>
+  <style type="text/css">
+    .userInput{
+      width: 300px;
+      height: 25px;
+      font-size: 15px;/*字体大小设置*/
+      padding-left: 6px;/*内补丁*/
+    }
+    .showData{
+      width: 309px;
+      border: 1px solid black;
+      background: sandybrown;
+      display: none;
+    }
+
+    .showData p{
+      padding-left: 5px;
+      margin-top: 2px;
+      margin-bottom: 3px;
+    }
+
+    .showData p:hover{
+      cursor: pointer;
+      border: 1px blue solid ;
+      background-color: burlywood;
+    }
+  </style>
+</head>
+<body>
+<script type="text/javascript">
+
+  window.onload = function (){
+    document.getElementById("keywords").onkeyup = function () {//绑定文本框键盘弹起事件
+
+      if (this.value == ""){
+        document.getElementById("showData").style.display = "none"
+      }else {
+        //this表示的是文本框，因此this.value表示的就是文本框中的数据
+        //1.创建XMLHttpRequest核心对象
+        var xmlHttpRequest = new XMLHttpRequest();
+        //2.注册回调函数
+        xmlHttpRequest.onreadystatechange = function () {
+          if (xmlHttpRequest.readyState === 4) {
+            if (xmlHttpRequest.status >= 200 && xmlHttpRequest.status < 300) {
+              const json = JSON.parse(xmlHttpRequest.responseText);
+              let html = ""
+              for (var i = 0; i < json.length; i++) {
+                html += "<p οnclick='setInput(\""+json[i].username+"\")'>"+json[i].username+"</p>"
+              }
+              document.getElementById("showData").innerHTML = html
+              document.getElementById("showData").style.display = "block"
+            }
+          }
+        }
+        //3.打开通道
+        xmlHttpRequest.open("GET","/AJAX/query?t="+new Date().getTime()+"&keywords="+this.value,true)
+        //4.发送数据
+        xmlHttpRequest.send()
+      }
+
+    }
+
+    function setInput(content){
+      document.getElementById("keywords").value = content
+      document.getElementById("showData").style.display = "none"
+    }
+  }
+
+</script>
+
+<input type="text" class="userInput" id="keywords">
+<div class="showData" id="showData">
+</div>
+</body>
+</html>
+

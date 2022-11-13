@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+namespace:命名空间
+
+-->
+<mapper namespace="student">
+
+
+<!--    <select id="selectBlog" resultType="Blog">-->
+<!--        select * from Blog where id = #{id}-->
+<!--    </select>-->
+    <select id="getstudentID"  resultType="com.baen.student" parameterType="java.lang.String">
+        SELECT name,age,addr FROM t_student where name=#{id}
+    </select>
+
+
+</mapper>
